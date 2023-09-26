@@ -1,0 +1,150 @@
+@font-face {
+    font-family: galacticAdventure;
+    src: url(/assets/fonts/GalacticAdventure.otf);
+  }
+body{
+    margin: 0px;
+    background-image: url('/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+}
+
+.title{
+    color: #641414;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heros{
+display: none;
+gap: 70px;
+margin:56px 70px;
+}
+.hero{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    height: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    margin: 0 0 60%;
+    padding: 5px 20px 0;
+    box-sizing: border-box;
+    grid-template-rows: 100%;
+    cursor: pointer;
+    position: relative;
+    filter: drop-shadow(0 0 20px rgb(0 0 0/50%));
+
+}
+::before.hero{
+ content: "";
+ position: absolute;
+ z-index: -1;
+ inset: 0;
+ background: top/cover;
+ transform-origin:bottom;
+ filter: brightness(.9);
+ transition: .5%;
+
+
+}
+
+.btn{
+    background-color: rgb(37, 14, 87);
+    color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 9px rgb(64, 62, 192);
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    
+
+
+}
+:hover.btn{background-color: rgb(49, 9, 57);}
+:active.btn{background-color: #5d1464;
+    box-shadow: 0 5px #310535;
+    transform: translateY(4px);}
+.hero-avatar{
+    border-radius: 250px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    
+}
+
+.hero-avatar:hover{
+   animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+.info-hero{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.detils-hero{
+    font-size:20px;
+    color: rgb(166, 26, 201);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.name-hero{
+    font-size: 30px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin-bottom: 10px;
+    color: rgb(120, 19, 19);
+}
+
+.show-winner{
+    font-size: 40px;
+font-family: Georgia, 'Times New Roman', Times, serif;    
+color: #641414;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+#start-fight{
+    display: none;
+   
+}
+#show-winner{
+    display: none;
+}
+.d-none {
+    display: none;
+}
+.d-flex {
+    display: flex!important;
+}
+.d-block {
+    display: block !important;
+}
